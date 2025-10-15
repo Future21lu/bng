@@ -1,11 +1,8 @@
 import "./App.css";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import Header from "./components/header"; // Removed unused import
 import { useState } from "react";
 import RiponSong from "./test.mp3";
-// import { useEffect } from "react"; // Removed unused import
-// import Footer from "./Footer"; // Removed unused import
 
 const dialogues = [
   {
