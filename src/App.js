@@ -1,11 +1,11 @@
 import "./App.css";
-import { Button, Navbar, Container, Form } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./components/header";
+// import Header from "./components/header"; // Removed unused import
 import { useState } from "react";
 import RiponSong from "./test.mp3";
-import { useEffect } from "react";
-import Footer from "./Footer";
+// import { useEffect } from "react"; // Removed unused import
+// import Footer from "./Footer"; // Removed unused import
 
 const dialogues = [
   {
@@ -336,24 +336,23 @@ function App() {
   const [random, setRandom] = useState(0);
   const [isFirstPlay, setFirstPlay] = useState("true");
 
-  const trimDialogue = (dialogue) => {
-    return trimDialogue.split(",").join("\n");
-  };
-
-  var song_source;
+  // const trimDialogue = (dialogue) => {
+  //   return trimDialogue.split(",").join("\n");
+  // };
+  // var song_source;
 
   const playSong = () => {
-    let song = new Audio(RiponSong);
-    song_source = song.src;
-    console.log("PlaySong Called");
-    song.play();
-    song.volume = 0.5;
-    console.log("Playing");
+  let song = new Audio(RiponSong);
+  // song_source = song.src; // Removed unused assignment
+  console.log("PlaySong Called");
+  song.play();
+  song.volume = 0.5;
+  console.log("Playing");
   };
 
 
 
-  let isFirstTime = true;
+  // let isFirstTime = true; // Removed unused variable
   const getRandomDialogue = () => {
     if (isFirstPlay) {
       playSong();
